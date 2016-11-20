@@ -1,0 +1,50 @@
+extends layout
+
+block content
+
+    .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+        header.mdl-layout__header.mdl-layout__header--transparant.mdl-layout__header--waterfall
+            .mdl-layout__header-row
+                span.mdl-layout-title #{title}
+            .mdl-layout__tab-bar.mdl-js-ripple-effect
+                a.mdl-layout__tab.is-active(href="#tab-main") Entry
+                a.mdl-layout__tab(href="#scroll-tab-2") List 
+
+        main.mdl-layout__content
+
+            section.mdl-layout__tab-panel.is-active#tab-main
+                .mdl-grid
+                    .mdl-cell.mdl-card.mdl-shadow--2dp.mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop.mdl-cell--12-col
+                        .mdl-card__title.mdl-color--primary
+                            h2.mdl-card__title-text.mdl-color-text--primary-contrast Completed task 
+                        .mdl-card__supporting-text
+                            form(action="#", method="post")
+                                .mdl-cell--8-col-tablet.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                                    input.mdl-textfield__input(name="dunthis", type="text", id="dunthis", maxlength=32)
+                                    label.mdl-textfield__label(for="dunthis") I dundid this...
+                                label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect(for="important")
+                                    input(name="important", type="checkbox")#important.mdl-checkbox__input
+                                    span.mdl-checkbox__label Important
+                                .mdl-grid
+                                    
+                                .mdl-cell--4-col-phone.mdl-cell--8-col-tablet
+                                    button.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--raised.mdl-button--accent(type="submit") Submit
+
+            section.mdl-layout__tab-panel#scroll-tab-2
+                .mdl-grid
+                    .mdl-cell.mdl-card.mdl-shadow--2dp.mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop.mdl-cell--12-col
+                        .mdl-card__title.mdl-color--primary
+                            h2.mdl-card__title-text.mdl-color-text--primary-contrast November
+                        .mdl-card__supporting-text
+                            ul.mdl-list
+                                li.mdl-list__item.mdl-list__item--two-line
+                                    span.mdl-list__item-primary-content
+                                        span Checked #Preproriaan video on YT
+                                        span.mdl-list__item-sub-title 2016 Nov 13 22:42
+
+                                li.mdl-list__item.mdl-list__item--two-line
+                                    span.mdl-list__item-primary-content
+                                        span Checked #Preproriaan video on YT
+                                        span.mdl-list__item-sub-title 2016 Nov 13 22:42
+
+
