@@ -9,7 +9,7 @@ router.get('/', (req, res, next)=>{
 })
 
 router.post('/', (req, res, next)=>{
-    fs.readFile("./testfile", "utf-8", (err, data)=>{
+    fs.readFile("./data/index.json", "utf-8", (err, data)=>{
         if (err) throw err
         console.log(data)
     })
